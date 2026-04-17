@@ -14,7 +14,8 @@ import com.coforge.entities.Student;
 import com.coforge.services.StudentService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin("*")
+
 public class StudentController {
 	
 	@Autowired

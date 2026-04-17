@@ -1,6 +1,6 @@
 import axios from "axios";
 
 const api=axios.create({
-    baseURL:"http://localhost:8080/students"
+   baseURL: "https://silver-train-rxrvjjrjjvrhgqq-8082.app.github.dev/students"
 })
 export default api
