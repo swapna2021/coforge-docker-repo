@@ -9,6 +9,8 @@ function App() {
             <div className="row bg-primary text-light">
                  <h1> Student Management App</h1>
                  <h2>Adding to Git</h2>
+
+                 <h1>Swapna Motupally</h1>
             </div>
       <div className='row'>
         <ApiRoutes/>
