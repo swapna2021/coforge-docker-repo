@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls -la'
-                sh 'docker ps'
+                sh 'docker ps -a'
             }
         }
 
@@ -19,9 +19,15 @@ pipeline {
             }
         }
 
+        stage('Clean old containers') {
+            steps {
+                sh 'docker rm -f mysql-db student-backend student-frontend || true'
+            }
+        }
+
         stage('Run docker compose') {
             steps {
-                sh 'docker compose down || true'
+                sh 'docker compose down --remove-orphans || true'
                 sh 'docker compose up -d --build'
             }
         }
