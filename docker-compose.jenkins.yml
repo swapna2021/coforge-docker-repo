@@ -12,5 +12,6 @@ services:
    - /var/run/docker.sock/var/run/docker.sock
    - .:/workspace
   working_dir: /workspace
+  privileged: true
 volumes:
  jenkins_home: {}   
